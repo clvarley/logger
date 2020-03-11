@@ -13,6 +13,13 @@ Class FileLogger Implements LoggerInterface
 {
 
     /**
+     * Creates a file logger
+     *
+     * @param array $options (Optional) Logger options
+     */
+    public function __construct( array $options = [] ) {}
+
+    /**
      * Write a message to a log file
      *
      * @param string $message Log message

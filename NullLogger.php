@@ -13,6 +13,13 @@ Class NullLogger Implements LoggerInterface
 {
 
     /**
+     * Creates a Null logger
+     *
+     * @param array $options (Optional) Logger options
+     */
+    public function __construct( array $options = [] ) {}
+
+    /**
      * Discards the given message
      *
      * @param string $message Log message

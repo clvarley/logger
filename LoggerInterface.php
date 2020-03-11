@@ -39,9 +39,20 @@ Interface LoggerInterface
     public const ERROR = 4;
 
     /**
+     * Create an instance of the logger
+     *
+     * Allows the passing of an $options array, the definition of which is
+     * left up to the implementor
+     *
+     * @param array $options (Optional) Logger options
+     */
+    public function __construct( array $options = [] );
+
+    /**
      * Log a normal message
      *
-     * @param string $message [description]
+     * @param string $message Log message
+     * @return void           N/a
      */
     public function log( string $message ) : void;
 

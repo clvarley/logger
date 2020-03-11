@@ -15,9 +15,13 @@ Class SystemLogger Implements LoggerInterface
     private $open = false;
 
     /**
-     * Prepares the connection to the system logger
+     * Creates a system logger
+     *
+     * Opens a connection to the underlying OS system logger
+     *
+     * @param array $options (Optional) Logger options
      */
-    public function __construct()
+    public function __construct( array $options = [] )
     {
         $this->open = \openlog(
             '',

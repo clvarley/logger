@@ -13,6 +13,13 @@ Class ConsoleLogger Implements LoggerInterface
 {
 
     /**
+     * Creates a console logger
+     *
+     * @param array $options (Optional) Logger options
+     */
+    public function __construct( array $options = [] ) {}
+
+    /**
      * Write a standard message to the console
      *
      * @param string $message Log message

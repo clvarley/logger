@@ -9,8 +9,15 @@ use \Logging\LoggerInterface;
  *
  * @author <clvarley>
  */
-Class OutputLogger Extends LoggerInterface
+Class OutputLogger Implements LoggerInterface
 {
+
+    /**
+     * Creates an output logger
+     *
+     * @param array $options (Optional) Logger options
+     */
+    public function __construct( array $options = [] ) {}
 
     /**
      * Write a standard message to the screen
