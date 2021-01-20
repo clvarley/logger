@@ -98,6 +98,7 @@ The log message to be written
 ```php
 $logger->log( "Something happened!" );
 ```
+---
 
 ### Info
 
@@ -121,6 +122,8 @@ Information to be logged.
 $logger->info( "Hey, this might be important!" );
 ```
 
+---
+
 ### Warn
 
 Writes a warning to the logger. Use this to keep track of things that might
@@ -141,6 +144,8 @@ Warning to be logged.
 ```php
 $logger->warn( "Something's gone wrong!" );
 ```
+
+---
 
 ### Error
 
@@ -163,6 +168,8 @@ Error to be logged.
 ```php
 $logger->error( "Oh snap! Something's broken!" );
 ```
+
+---
 
 ### Write
 
