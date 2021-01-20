@@ -70,8 +70,8 @@ have to change what kind of logger you create...
 ```php
 use Logging\ConsoleLogger;
 
-// Log to the console instead
-$log = new ConsoleLogger();
+// Changed my mind, log to the console instead
+$logger = new ConsoleLogger();
 ```
 
 ... and all the functions you've already written will continue to work! 🎉
