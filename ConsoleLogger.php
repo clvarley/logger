@@ -4,6 +4,8 @@ namespace Logging;
 
 use Logging\LoggerInterface;
 
+use const PHP_EOL;
+
 /**
  * Provides functions to log to the console
  *
@@ -27,7 +29,7 @@ Class ConsoleLogger Implements LoggerInterface
      */
     public function log( string $message ) : void
     {
-        echo $message . \PHP_EOL;
+        echo $message . PHP_EOL;
 
         return;
     }
@@ -40,7 +42,7 @@ Class ConsoleLogger Implements LoggerInterface
      */
     public function info( string $message ) : void
     {
-        echo $message . \PHP_EOL;
+        echo $message . PHP_EOL;
 
         return;
     }
@@ -53,7 +55,7 @@ Class ConsoleLogger Implements LoggerInterface
      */
     public function warn( string $message ) : void
     {
-        echo $message . \PHP_EOL;
+        echo $message . PHP_EOL;
 
         return;
     }
@@ -66,7 +68,7 @@ Class ConsoleLogger Implements LoggerInterface
      */
     public function error( string $message ) : void
     {
-        echo $message . \PHP_EOL;
+        echo $message . PHP_EOL;
 
         return;
     }
@@ -80,7 +82,7 @@ Class ConsoleLogger Implements LoggerInterface
      */
     public function write( int $level, string $message ) : void
     {
-        echo $message . \PHP_EOL;
+        echo $message . PHP_EOL;
 
         return;
     }

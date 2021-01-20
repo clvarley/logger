@@ -4,6 +4,17 @@ namespace Logging;
 
 use Logging\LoggerInterface;
 
+use function openlog;
+use function closelog;
+use function syslog;
+
+use const LOG_ODELAY;
+use const LOG_USER;
+use const LOG_ERR;
+use const LOG_WARNING;
+use const LOG_INFO;
+use const LOG_NOTICE;
+
 Class SystemLogger Implements LoggerInterface
 {
 
@@ -23,10 +34,10 @@ Class SystemLogger Implements LoggerInterface
      */
     public function __construct( array $options = [] )
     {
-        $this->open = \openlog(
+        $this->open = openlog(
             '',
-            \LOG_ODELAY,
-            \LOG_USER
+            LOG_ODELAY,
+            LOG_USER
         );
     }
 
@@ -35,7 +46,7 @@ Class SystemLogger Implements LoggerInterface
      */
     public function __destruct()
     {
-        \closelog();
+        closelog();
     }
 
     /**
@@ -46,7 +57,7 @@ Class SystemLogger Implements LoggerInterface
      */
     public function log( string $message ) : void
     {
-        \syslog( \LOG_NOTICE, $message );
+        syslog( LOG_NOTICE, $message );
 
         return;
     }
@@ -59,7 +70,7 @@ Class SystemLogger Implements LoggerInterface
      */
     public function info( string $message ) : void
     {
-        \syslog( \LOG_INFO, $message );
+        syslog( LOG_INFO, $message );
 
         return;
     }
@@ -72,7 +83,7 @@ Class SystemLogger Implements LoggerInterface
      */
     public function warn( string $message ) : void
     {
-        \syslog( \LOG_WARNING, $message );
+        syslog( LOG_WARNING, $message );
 
         return;
     }
@@ -85,7 +96,7 @@ Class SystemLogger Implements LoggerInterface
      */
     public function error( string $message ) : void
     {
-        \syslog( \LOG_ERR, $message );
+        syslog( LOG_ERR, $message );
 
         return;
     }
@@ -102,24 +113,24 @@ Class SystemLogger Implements LoggerInterface
         // Map to syslog constants
         switch ( $level ) {
             case self::ERROR:
-                $level = \LOG_ERR;
+                $level = LOG_ERR;
             break;
 
             case self::WARN:
-                $level = \LOG_WARNING;
+                $level = LOG_WARNING;
             break;
 
             case self::INFO:
-                $level = \LOG_INFO;
+                $level = LOG_INFO;
             break;
 
             case self::LOG:
             default:
-                $level = \LOG_NOTICE;
+                $level = LOG_NOTICE;
             break;
         }
 
-        \syslog( $level, $message );
+        syslog( $level, $message );
 
         return;
     }

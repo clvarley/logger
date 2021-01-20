@@ -4,6 +4,9 @@ namespace Logging;
 
 use Logging\LoggerInterface;
 
+use function printf;
+use function htmlentities;
+
 /**
  * Provides functions to log to the screen
  *
@@ -27,9 +30,9 @@ Class HtmlLogger Implements LoggerInterface
      */
     public function log( string $message ) : void
     {
-        \printf(
+        printf(
             '<pre>%s</pre>',
-            \htmlentities( $message )
+            htmlentities( $message )
         );
 
         return;
@@ -43,9 +46,9 @@ Class HtmlLogger Implements LoggerInterface
      */
     public function info( string $message ) : void
     {
-        \printf(
+        printf(
             '<pre>%s</pre>',
-            \htmlentities( $message )
+            htmlentities( $message )
         );
 
         return;
@@ -59,9 +62,9 @@ Class HtmlLogger Implements LoggerInterface
      */
     public function warn( string $message ) : void
     {
-        \printf(
+        printf(
             '<pre>%s</pre>',
-            \htmlentities( $message )
+            htmlentities( $message )
         );
 
         return;
@@ -75,9 +78,9 @@ Class HtmlLogger Implements LoggerInterface
      */
     public function error( string $message ) : void
     {
-        \printf(
+        printf(
             '<pre>%s</pre>',
-            \htmlentities( $message )
+            htmlentities( $message )
         );
 
         return;
@@ -92,9 +95,9 @@ Class HtmlLogger Implements LoggerInterface
      */
     public function write( int $level, string $message ) : void
     {
-        \printf(
+        printf(
             '<pre>%s</pre>',
-            \htmlentities( $message )
+            htmlentities( $message )
         );
 
         return;
