@@ -2,7 +2,7 @@
 
 namespace Logging;
 
-use \Logging\LoggerInterface;
+use Logging\LoggerInterface;
 
 Class SystemLogger Implements LoggerInterface
 {

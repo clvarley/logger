@@ -2,7 +2,7 @@
 
 namespace Logging;
 
-use \Logging\LoggerInterface;
+use Logging\LoggerInterface;
 
 /**
  * Provides a void into which messages can be thrown

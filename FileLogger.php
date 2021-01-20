@@ -2,7 +2,7 @@
 
 namespace Logging;
 
-use \Logging\LoggerInterface;
+use Logging\LoggerInterface;
 
 /**
  * Provides functions to log to a text file

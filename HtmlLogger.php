@@ -2,14 +2,14 @@
 
 namespace Logging;
 
-use \Logging\LoggerInterface;
+use Logging\LoggerInterface;
 
 /**
  * Provides functions to log to the screen
  *
  * @author <clvarley>
  */
-Class OutputLogger Implements LoggerInterface
+Class HtmlLogger Implements LoggerInterface
 {
 
     /**

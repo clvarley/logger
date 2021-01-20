@@ -16,11 +16,9 @@ The currently implemented log types are:
 Basic logger that simply prints log messages straight to the console using echo
 statements.
 
-#### OutputLogger
+#### HtmlLogger
 
-Logger used to output log messages to the browser. This logger makes the
-assumption you are working with HTML documents (There is currently no plan to
-support XML documents)
+Logger used to output log messages to the browser.
 
 Takes a log message, escapes any HTML entities and then wraps the whole message
 in a `<pre />` tag.
@@ -43,8 +41,3 @@ may seem counter intuitive, it is provided for 2 reasons:
 
 1. It provides an interface similar to `/dev/null` on Linux or `NUL` on Windows
 2. You can swap in NullLogger if your application no longer requires logging
-
-## Methods
-
-
-
