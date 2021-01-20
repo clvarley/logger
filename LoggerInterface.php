@@ -29,14 +29,14 @@ Interface LoggerInterface
      *
      * @var int WARN Log level
      */
-    public const WARN = 3;
+    public const WARN = 2;
 
     /**
      * Log level for error messages
      *
      * @var int ERROR Log level
      */
-    public const ERROR = 4;
+    public const ERROR = 3;
 
     /**
      * Create an instance of the logger
