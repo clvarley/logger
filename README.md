@@ -45,7 +45,7 @@ messages will be viewable in the Event Viewer.
 
 ## Usage
 
-To use a logger, simply instantiate one of the **\***Logger classes and type hint
+To use a logger, simply instantiate one of the \*Logger classes and type hint
 your function or method with `LoggerInterface`. This is particularly useful if
 using a framework with dependency injection such as Symfony, Laravel or
 [SwiftlyPHP](https://github.com/SwiftlyPHP). \*__cough__\* plug \*__cough__\*.
