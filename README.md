@@ -1,12 +1,13 @@
 # Simple Logger
 ## About
 
-A collection of very simple logging utilities that I sometime use during
+A collection of very simple logging utilities that I sometimes use during
 development of personal projects. All the classes here implement the
 `LoggerInterface`, allowing you to build against the interface and not the
-concrete implementation. If done correctly, this makes it easier for you to swap
-the type of logger you are using without having to refactor your entire
-codebase.
+concrete implementation.
+
+If done correctly, this makes it easier for you to swap the type of logger
+you are using without having to refactor your entire codebase.
 
 ## Log Types
 
