@@ -17,7 +17,7 @@ use const PHP_EOL;
  *
  * @author clvarley
  */
-Class ConsoleLogger Implements LoggerInterface
+Class StderrLogger Implements LoggerInterface
 {
 
     /**
