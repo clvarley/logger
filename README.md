@@ -13,13 +13,6 @@ you are using without having to refactor your entire codebase.
 
 The currently implemented log types are:
 
-### StderrLogger
-
-Basic logger that prints messages directly to the STDERR stream.
-
-As most implementations of STDERR have no concept of priority levels, all the
-methods of this class have the same behaviour.
-
 ### FileLogger
 
 // TODO: Not yet finished
@@ -38,6 +31,13 @@ may seem counter-intuitive, it is provided for 2 reasons:
 
 1. It provides an interface similar to `/dev/null` on Linux or `NUL` on Windows
 2. You can swap in NullLogger if your application no longer requires logging
+
+### StderrLogger
+
+Basic logger that prints messages directly to the STDERR stream.
+
+As most implementations of STDERR have no concept of priority levels, all the
+methods of this class have the same behaviour.
 
 ### SystemLogger
 
