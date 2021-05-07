@@ -9,17 +9,10 @@ use const PHP_EOL;
 /**
  * Provides functions to log to the console
  *
- * @author <clvarley>
+ * @author clvarley
  */
 Class ConsoleLogger Implements LoggerInterface
 {
-
-    /**
-     * Creates a console logger
-     *
-     * @param array $options (Optional) Logger options
-     */
-    public function __construct( array $options = [] ) {}
 
     /**
      * Write a standard message to the console

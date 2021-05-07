@@ -15,6 +15,11 @@ use const LOG_WARNING;
 use const LOG_INFO;
 use const LOG_NOTICE;
 
+/**
+ * Provides utility for writing to the system log
+ *
+ * @author clvarley
+ */
 Class SystemLogger Implements LoggerInterface
 {
 
@@ -23,19 +28,19 @@ Class SystemLogger Implements LoggerInterface
      *
      * @var bool $open Connection status
      */
-    private $open = false;
+    private $open;
 
     /**
      * Creates a system logger
      *
      * Opens a connection to the underlying OS system logger
      *
-     * @param array $options (Optional) Logger options
+     * @param string $prefix (Optional) Log prefix
      */
-    public function __construct( array $options = [] )
+    public function __construct( string $prefix = '' )
     {
         $this->open = openlog(
-            '',
+            $prefix,
             LOG_ODELAY,
             LOG_USER
         );

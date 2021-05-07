@@ -5,7 +5,7 @@ namespace Logging;
 /**
  * Simple logging interface
  *
- * @author <clvarley>
+ * @author clvarley
  */
 Interface LoggerInterface
 {
@@ -37,16 +37,6 @@ Interface LoggerInterface
      * @var int ERROR Log level
      */
     public const ERROR = 3;
-
-    /**
-     * Create an instance of the logger
-     *
-     * Allows the passing of an $options array, the definition of which is
-     * left up to the implementor
-     *
-     * @param array $options (Optional) Logger options
-     */
-    public function __construct( array $options = [] );
 
     /**
      * Log a normal message

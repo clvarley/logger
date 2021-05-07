@@ -7,17 +7,10 @@ use Logging\LoggerInterface;
 /**
  * Provides a void into which messages can be thrown
  *
- * @author <clvarley>
+ * @author clvarley
  */
 Class NullLogger Implements LoggerInterface
 {
-
-    /**
-     * Creates a Null logger
-     *
-     * @param array $options (Optional) Logger options
-     */
-    public function __construct( array $options = [] ) {}
 
     /**
      * Discards the given message

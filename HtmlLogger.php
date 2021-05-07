@@ -10,17 +10,10 @@ use function htmlentities;
 /**
  * Provides functions to log to the screen
  *
- * @author <clvarley>
+ * @author clvarley
  */
 Class HtmlLogger Implements LoggerInterface
 {
-
-    /**
-     * Creates an output logger
-     *
-     * @param array $options (Optional) Logger options
-     */
-    public function __construct( array $options = [] ) {}
 
     /**
      * Write a standard message to the screen
