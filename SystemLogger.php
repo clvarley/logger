@@ -63,8 +63,6 @@ Class SystemLogger Implements LoggerInterface
     public function log( string $message ) : void
     {
         syslog( LOG_NOTICE, $message );
-
-        return;
     }
 
     /**
@@ -76,8 +74,6 @@ Class SystemLogger Implements LoggerInterface
     public function info( string $message ) : void
     {
         syslog( LOG_INFO, $message );
-
-        return;
     }
 
     /**
@@ -89,8 +85,6 @@ Class SystemLogger Implements LoggerInterface
     public function warn( string $message ) : void
     {
         syslog( LOG_WARNING, $message );
-
-        return;
     }
 
     /**
@@ -102,8 +96,6 @@ Class SystemLogger Implements LoggerInterface
     public function error( string $message ) : void
     {
         syslog( LOG_ERR, $message );
-
-        return;
     }
 
     /**

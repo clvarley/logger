@@ -13,10 +13,12 @@ you are using without having to refactor your entire codebase.
 
 The currently implemented log types are:
 
-### ConsoleLogger
+### StderrLogger
 
-Basic logger that simply prints log messages straight to the console using echo
-statements.
+Basic logger that prints messages directly to the STDERR stream.
+
+As most implementations of STDERR have no concept of priority levels, all the
+methods of this class have the same behaviour.
 
 ### FileLogger
 
@@ -69,10 +71,10 @@ Now, if you ever need to change how logging is handled in the future, you just
 have to change what kind of logger you create...
 
 ```php
-use Logging\ConsoleLogger;
+use Logging\SystemLogger;
 
-// Changed my mind, log to the console instead
-$logger = new ConsoleLogger();
+// Changed my mind, log to STDERR instead
+$logger = new SystemLogger();
 ```
 
 ... and all the functions you've already written will continue to work! 🎉
