@@ -33,7 +33,7 @@ Class SystemLogger Implements LoggerInterface
     /**
      * Creates a system logger
      *
-     * Opens a connection to the underlying OS system logger
+     * Opens a connection to the underlying OS system logger.
      *
      * @param string $prefix (Optional) Log prefix
      */
