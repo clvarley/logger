@@ -1,9 +1,19 @@
 {
     "name": "clvarley/logger",
-    "description": "A collection of very simple logging utilities.",
     "type": "library",
+    "description": "A collection of very simple logging utilities.",
+    "homepage": "https://github.com/clvarley/logger",
     "license": "MIT",
+    "readme": "README.md",
+    "require": {
+        "php": ">=7.1"
+    },
     "require-dev": {
         "vimeo/psalm": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logging\\": "src/"
+        }
     }
 }
