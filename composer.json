@@ -1,0 +1,9 @@
+{
+    "name": "clvarley/logger",
+    "description": "A collection of very simple logging utilities.",
+    "type": "library",
+    "license": "MIT",
+    "require-dev": {
+        "vimeo/psalm": "^4.8"
+    }
+}
